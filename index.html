@@ -1,0 +1,245 @@
+<html>
+    <head>
+        <title>Welcome Page</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <!-- Background -->
+        <div class="wrapper">
+            <div class="box">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="images/logo.png" class="logoPic">
+            </div>
+
+            <i class='bx bx-menu' id="menuIcon"></i>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#works">Works</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="homeContent">
+                <h3>Hello, I'm</h3>
+                <h1><span class="multiple-text"></span></h1>
+                <h3>And I want to be a Web Designer</h3>
+                <p>Take a look around :3</p>
+
+                <div class="socialMedia">
+                    <a href="https://instagram.com/bign1ck?igshid=MzMyNGUyNmU2YQ%3D%3D&utm_source=qr"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="https://twitter.com/home"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.linkedin.com/in/nicholas-tee-417825238/"><i class='bx bxl-linkedin'></i></a>
+                </div>
+                <a href="#about" class="btn">About Me</a>
+            </div>
+
+            <div class="myImage">
+                <img src="images/standard.jpg" alt="mainPic">
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section class="about" id="about">
+            <div class="aboutContent">
+                <h3>About <span>Me</span></h3>
+                <p>Hello! I'm Nicholas Tee, a Digital Design and Development student with a passion for designing and creating websites.
+                I have experience in both back-end and front-end development, and I'm familiar with a variety of programming languages
+                and tools, including HTML, CSS, JavaScript, and PHP. I've also created a few websites for school projects and as well
+                as some other hobbies. Outside of school, I enjoy going to the gym and photography. Going to the gym helps me to stay
+                focused and motivated, and photography helps me to develop my creative skills and learn new Photoshop and Lightroom techniques.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('awards')">Awards</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Front end</span><br>HTML, CSS, Javascript, Bootstrap 5</li>
+                        <li><span>Back end</span><br>PHP, Java and SQL</li>
+                        <li><span>Design</span><br>Adobe XD, Photoshop, Illustrator and Lightroom</li>
+                    <ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - 2025</span><br>Currently studying in Republic Polytechnic</li>
+                        <li><span>2017 - 2021</span><br>Yuhua Secondary School</li>
+                        <li><span>2011 - 2016</span><br>Jurong Primary School</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="awards">
+                    <ul>
+                        <li><span>2017, 2018, 2019</span><br>Edusave Scholarship</li>
+                        <li><span>2018, 2019, 2020</span><br>Edusave Character Award (ECHA)</li>
+                        <li><span>2020</span><br>Edusave Award for Achievememt, Good Leadership and Service (EAGLES)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="myImage">
+                <img src="images/fishEyePose.jpg" alt="mainPic">
+            </div>
+        </section>
+
+        <!-- Works/ Hobbies -->
+        <section class="works" id="works">
+            <h2 class="heading">My <span>Skills</span></h2>
+
+            <div class="worksContainer">
+                <div class="worksBox">
+                    <i class='bx bxs-paint-roll'></i>
+                    <h3>Web Designer</h3>
+                    <p>Websites that I have created using Adobe XD,
+                        includes low-fi and high-fi creations. Furthermore, it
+                        includes the use of HTML, CSS, PHP and JS.
+                    </p>
+                    <a href="#" class="btn">View More</a>
+                </div>
+            </div>
+
+            <div class="worksContainer">
+                <div class="worksBox">
+                    <i class='bx bxs-camera'></i>
+                    <h3>Photography</h3>
+                    <p>These are some of the photos that I have taken
+                        that include the before & after of being edited
+                        with Photoshop and Lightroom.
+                    </p>
+                    <a href="#" class="btn">View More</a>
+                </div>
+            </div>
+
+            <div class="worksContainer">
+                <div class="worksBox">
+                    <i class='bx bx-code-alt'></i>
+                    <h3>Programming</h3>
+                    <p> Created using Android Programming.</p>
+                    <a href="#" class="btn">View More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section  class="portfolio" id="portfolio">
+            <h2 class="heading">Recent <span>Projects</span></h2>
+
+            <div class="portContainer">
+                <div class="portBox">
+                    <img src="images/tourWebsite.jpg" alt="">
+                    <div class="portLayer">
+                        <h4>Tour Website</h4>
+                        <p>A Tour website that uses HTML and CSS</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portBox">
+                    <img src="images/movieHome.jpg" alt="">
+                    <div class="portLayer">
+                        <h4>Movie Website</h4>
+                        <p>A Movie website that uses HTML, CSS and PHP</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portBox">
+                    <img src="images/toyWebsite.jpg" alt="">
+                    <div class="portLayer">
+                        <h4>Toy Website</h4>
+                        <p>Created using Adobe XD</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portBox">
+                    <img src="images/skateWebsite.jpg" alt="">
+                    <div class="portLayer">
+                        <h4>Skating Website</h4>
+                        <p>Created using Adobe XD</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portBox">
+                    <img src="images/krisApp.jpg" alt="">
+                    <div class="portLayer">
+                        <h4>Kris App</h4>
+                        <p>Created using Adobe XD</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+
+                <div class="portBox">
+                    <img src="images/gymWeb.jpg" alt="">
+                    <div class="portLayer">
+                        <h4>Gym Clothing Website</h4>
+                        <p>Created using Adobe XD</p>
+                        <a href="#"><i class='bx bx-link-external'></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me -->
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+
+            <form action="#">
+                <div class="inputBox">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Contact Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message"  class="btn">
+            </form>
+        </section>
+
+        <!-- Footer? -->
+        <footer class="footer">
+            <div class="footerText">
+                <p>Copyright &copy; 2023 by NicholasTee | All rights reserved.</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
+        </footer>
+
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        
+        <!-- typed js -->
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+        <!-- custom js -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
