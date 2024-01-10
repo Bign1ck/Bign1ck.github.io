@@ -2,7 +2,7 @@
 let menuIcon = document.querySelector('#menuIcon');
 let navbar = document.querySelector('.navbar');
 
-menuIcon.onclick  = () => {
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
@@ -18,11 +18,11 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if (top >= offset && top <offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.foreach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id +']').
-                classList.add('active')
+                document.querySelector('header nav a[href*=' + id + ']').
+                    classList.add('active')
             });
         };
     });
@@ -30,7 +30,7 @@ window.onscroll = () => {
     /*-------------Sticky Navbar-------------------*/
 
     let header = document.querySelector('header');
-    
+
     header.classList.toggle('sticky', window.scrollY > 100);
 
 
@@ -40,11 +40,11 @@ window.onscroll = () => {
 };
 
 /*------------scroll react-------------------*/
-ScrollReveal ({ 
+ScrollReveal({
     reset: true,
     distance: '80px',
     duration: 2000,
-    delay: 200
+    delay: 5
 });
 
 ScrollReveal().reveal('.homeContent, .heading', { origin: 'top' });
@@ -54,8 +54,8 @@ ScrollReveal().reveal('.homeContent p , .aboutContent', { origin: 'right' });
 
 /*------------typing animation-------------------*/
 
-const typed = new Typed('.multiple-text',{
-    strings: ['Nicholas Tee','Nicholas Tee'],
+const typed = new Typed('.multiple-text', {
+    strings: ['Web Designer', 'Web Developer'],
     typeSpeed: 110,
     backSpeed: 75,
     backDelay: 1000,
@@ -63,14 +63,14 @@ const typed = new Typed('.multiple-text',{
 });
 
 var tablinks = document.getElementsByClassName("tab-links")
-        var tabcontents = document.getElementsByClassName("tab-contents")
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link")
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab")
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        };
+var tabcontents = document.getElementsByClassName("tab-contents")
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link")
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+};
