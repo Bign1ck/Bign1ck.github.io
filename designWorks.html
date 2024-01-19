@@ -23,6 +23,47 @@
         margin-right: auto;
     }
 
+    .modal-img {
+        width: 50vmin;
+        height: 30vmin;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .modal-content {
+        border-color: #d138f3;
+        background-color: #2c2a2d;
+        color: white;
+    }
+
+    .modal-header {
+        border-bottom: 1px solid #d138f3;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #d138f3;
+    }
+
+    .modal-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-body .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .modal-body .col-md-6 {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 </style>
 
 <body>
@@ -51,17 +92,14 @@
         <i class='bx bx-menu' id="menuIcon"></i>
 
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+            <a href="index.html">Back</a>
         </nav>
     </header>
 
     <!-- CARDS AND CAROUSEL-->
     <section>
 
-        <h2 class="heading" style="text-align: center; color: white; margin-top: 5rem;" >Design <span>Works</span></h2>
+        <h2 class="heading" style="text-align: center; color: white; margin-top: 5rem;">Web and App <span>Development</span></h2>
 
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -71,7 +109,65 @@
                     <div class="container-fluid p-10">
                         <div class="container text-center">
                             <div class="row pt-5">
-                                <div class="col-md-6 sol-sm-10">
+
+                                <div class="modal" id="movieModal" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Movie Website Overview</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img class="modal-img" src="images/movieHomePg.png">
+                                                        <img class="modal-img" src="images/movieList.png">
+                                                        <img class="modal-img" src="images/moreInfo.png">
+                                                        <img class="modal-img" src="images/loginPg.png">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="moreInfo">This Movie Review Website is made using
+                                                            HTML, CSS and PHP.</p>
+                                                        <p class="moreInfo">Welcome to my Movie Website which I created
+                                                            for my Graded Assignment, and also the first website that
+                                                            I created. It is suppose to mimic closely to movie websites
+                                                            that exist today such as Shaw Theatres or Golden Village.
+                                                            It has a user-friendly interface so that users can navigate
+                                                            through easily. They are 4 main areas, the Home Page, Movie
+                                                            List,
+                                                            Login or Register Page and the More Info Page. Through this
+                                                            project, it has allowed me to learn how to combine the use
+                                                            of PHP, HTML and CSS to create a basic functioning website
+                                                            that would help me with my Website creations in the future
+                                                        </p>
+
+                                                        <p class="moreInfo"><b>Features include:</b></p>
+                                                        <p class="moreInfo">1. Homepage that shows movies that are
+                                                            coming soon, that has a footer for customer support</p>
+                                                        <p class="moreInfo">2. Register and Login page that allows new
+                                                            users to sign up and login</p>
+                                                        <p class="moreInfo">3. Movie list page that shows all the movies
+                                                            that are screening now</p>
+                                                        <p class="moreInfo">4. A info page that shows the users more
+                                                            info about the movie as well as looking or even writing
+                                                            the reviews if they are logged in
+                                                        </p>
+                                                        <p class="moreInfo">5. A phpMyAdmin database that allows me to
+                                                            store all the information I need such as the
+                                                            emails, password, name , address, etc of users.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 sol-sm-10" onclick="openModal('movieModal')">
                                     <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
                                         <img class="card-img-top" src="images/movieHome.jpg" alt="Card image"
                                             style="width:100%; height:300px;">
@@ -97,9 +193,55 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
 
-                                <div class="col-md-6 sol-sm-10">
+                                <div class="modal" id="skateModal" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Skate Website Overview</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img class="modal-img" src="images/skateHomePg.png">
+                                                        <img class="modal-img" src="images/skateInstruc.png">
+                                                        <img class="modal-img" src="images/skateAbout.png">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="moreInfo">This Skate Course Website is made Adobe XD.
+                                                        </p>
+                                                        <p class="moreInfo">Welcome to my Skate Course Website which I
+                                                            created. The target audience is for people who can to 
+                                                            look or even sign up for the different types of skating
+                                                            courses that they might be interested in.
+                                                            It also introduces the 3 different intructors for the types
+                                                            of courses offered and consists of the
+                                                            usual About Me and Contact Us page.
+                                                        </p>
+
+                                                        <p class="moreInfo"><b>Features include:</b></p>
+                                                        <p class="moreInfo">1. Homepage prompts users to sign up and why
+                                                        </p>
+                                                        <p class="moreInfo">2. The List of instrcutors they have</p>
+                                                        <p class="moreInfo">3. 3 types of courses the offer from
+                                                            Beginner, Intermediate and Professional</p>
+                                                        <p class="moreInfo">4. An About page and their history</p>
+                                                        <p class="moreInfo">4. Contact Us page</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 sol-sm-10" onclick="openModal('skateModal')">
                                     <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
                                         <img class="card-img-top" src="images/skateWebsite.jpg" alt="Card image"
                                             style="width:100%; height:295px;">
@@ -128,7 +270,52 @@
                     <div class="container-fluid p-10">
                         <div class="container text-center">
                             <div class="row pt-5">
-                                <div class="col-md-6 sol-sm-10">
+
+                                <div class="modal" id="gymModal" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Gym E-Commerce Website</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img class="modal-img" src="images/gymCommerceHome.png">
+                                                        <img class="modal-img" src="images/categoryMen.png">
+                                                        <img class="modal-img" src="images/moreInfoClothes.png">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="moreInfo">This Gym E-Commerce Website is made Adobe
+                                                            XD.</p>
+                                                        <p class="moreInfo">Welcome to Gym E-Commerce Website which is
+                                                            the first Adobe XD Website that I created.
+                                                            The homepage consists of a carousel at the start to show the
+                                                            best selling items adn the contact footer
+                                                            at the bottom.
+                                                        </p>
+                                                        <p class="moreInfo"><b>- Colour Scheme is red and colour to represent
+                                                            the burning passion that people have when exercising
+                                                        </b></p>
+
+                                                        <p class="moreInfo"><b>Features include:</b></p>
+                                                        <p class="moreInfo">1. Homepage that shows bestselling products
+                                                        </p>
+                                                        <p class="moreInfo">2. Catelog for Male or Female Clothes</p>
+                                                        <p class="moreInfo">3. Adding item to cart</p>
+                                                        <p class="moreInfo">4. Saving the item to cart</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 sol-sm-10" onclick="openModal('gymModal')">
                                     <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
                                         <img class="card-img-top" src="images/gymWeb.jpg" alt="Card image"
                                             style="width:100%; height:300px;">
@@ -150,16 +337,60 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 sol-sm-10">
+                                <div class="modal" id="tourModal" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Tour Package Website</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img class="modal-img" src="images/tourHome.png">
+                                                        <img class="modal-img" src="images/tourPack.png">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="moreInfo">This Tour Package is made using HTML and
+                                                            CSS.</p>
+                                                        <p class="moreInfo">- This website was target towards people
+                                                            who wanted a simple way to look at tour packages what they
+                                                            want with a simple and straight-forward interface
+                                                        </p>
+                                                        <p class="moreInfo">- Some simple animations were added such as
+                                                            the zooming in on pictures when they were hovered over.
+                                                        </p>
+                                                        <p class="moreInfo">- The video in the backgorund would play on
+                                                            loop as well</p>
+                                                        <p class="moreInfo"><b>Features include:</b></p>
+                                                        <p class="moreInfo">1. Homepage with a video background</p>
+                                                        <p class="moreInfo">2. Packages that are offered</p>
+                                                        <p class="moreInfo">3. Types of Cruises offered</p>
+                                                        <p class="moreInfo">4. Contact Me page</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 sol-sm-10" onclick="openModal('tourModal')">
                                     <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
                                         <img class="card-img-top" src="images/tourWebsite.jpg" alt="Card image"
                                             style="width:100%; height:325px;">
                                         <div class="card-body">
                                             <h4 class="card-title">Tour Website</h4>
                                             <p class="card-text">
-                                                This is my tourist package website, designed to book travel experiences online with ease. Explore a user-friendly
-                                                interface and engaging features. Our secure booking system ensures a seamless journey, making it easy for 
-                                                travelers to discover and reserve their dream destinations with different price points.</p>
+                                                This is my tourist package website, designed to book travel experiences
+                                                online with ease. Explore a user-friendly
+                                                interface and engaging features. Our secure booking system ensures a
+                                                seamless journey, making it easy for
+                                                travelers to discover and reserve their dream destinations with
+                                                different price points.</p>
                                             <div class="skillsForProjects">
                                                 <p class="card-text"
                                                     style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
@@ -183,38 +414,141 @@
                     <div class="container-fluid p-10">
                         <div class="container text-center">
                             <div class="row pt-5">
-                                <div class="col-md-6 sol-sm-10">
-                                    <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
-                                        <img class="card-img-top" src="images/toyWebsite.jpg" alt="Card image"
-                                            style="width:100%; height:300px;">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Toy Website</h4>
-                                            <p class="card-text">Welcome to our vibrant toy store website, dive into a user-friendly interface, an extensive 
-                                                catalog of diverse toys, and interactive features, making it easy for parents and gift-givers to find the perfect
-                                                toys for every occasion. Explore the joy of toy shopping with us!</p>
-                                                <div class="skillsForProjects">
-                                                    <p class="card-text"
-                                                        style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
-                                                        Adobe XD</p>
+
+                                <div class="modal" id="covidModal" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Covid Cases Website</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <img class="modal-img" src="images/casesCovid.png">
+                                                        <img class="modal-img" src="images/progressPg.png">
+                                                        <img class="modal-img" src="images/locationMap.png">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="moreInfo">This Covid Data Website is made using HTML,
+                                                            CSS and Javascript.</p>
+                                                        <p class="moreInfo">- This website was created using anime.js
+                                                        </p>
+                                                        <p class="moreInfo">- The number of cases would ascend in number
+                                                            is anime.js</p>
+                                                        <p class="moreInfo">- This website is to provide information
+                                                            about the latest information about the recent Covid situation
+                                                            to Singapore residents
+                                                        </p>
+                                                        <p class="moreInfo">- The data for the Polyclinic locations are
+                                                            also in a adjustable table</p>
+                                                        <p class="moreInfo"><b>Features include:</b></p>
+                                                        <p class="moreInfo">1. Homepage that shows the numeric
+                                                            information about covid cases</p>
+                                                        <p class="moreInfo">2. Second section that shows that
+                                                            Vacciniation Progress in SG</p>
+                                                        <p class="moreInfo">3. Map that shows the different Polyclicnic
+                                                            Locations and Addresses</p>
+                                                        <p class="moreInfo">4. Tooltips on the map that shows the
+                                                            different locations</p>
+                                                    </div>
                                                 </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 sol-sm-10">
+                                <div class="col-md-6 sol-sm-10" onclick="openModal('covidModal')">
+                                    <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
+                                        <img class="card-img-top" src="images/locationMap.png" alt="Card image"
+                                            style="width:100%; height:300px;">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Covid Cases Website</h4>
+                                            <p class="card-text">Welcome to my Covid Cases Website, it is to allow
+                                                people to see the Covid situation in singapore.
+                                                It shows you all the statistics that you need. If you want to check if
+                                                you have covid, the list of Polyclicnic
+                                                locations are also shown on the map!</p>
+                                            <div class="skillsForProjects">
+                                                <p class="card-text"
+                                                    style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
+                                                    HTML</p>
+                                                <p class="card-text"
+                                                    style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
+                                                    CSS</p>
+                                                <p class="card-text"
+                                                    style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
+                                                    Bootstrap</p>
+                                                <p class="card-text"
+                                                    style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
+                                                    Javascript</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal" id="krisModal" data-bs-backdrop="static">
+                                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">Kris+ App</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <video autoplay muted loop id="myVideo" style="width: 90%;">
+                                                    <source src="images/krisApp.mp4" type="video/mp4">
+                                                </video>
+                                                <p class="moreInfo">This Kris+ App is made using Adobe XD</p>
+                                                <p class="moreInfo">- The purpose of this app is to let users use
+                                                    majority of the features such as ordering food, online check-in, 
+                                                    and checking the plane location. To make the experience of flying
+                                                    easier as everything can be done on their phone.
+                                                </p>
+                                                <p class="moreInfo">- Design Concept: The colour scheme is similar that
+                                                    to Singapore Airlines
+                                                    Blue, Yellow and White. Typography used is Poppins as it used in
+                                                    majority of websites and
+                                                    apps and is easy to read
+                                                </p>
+                                                <p class="moreInfo"><b>Features include:</b></p>
+                                                <p class="moreInfo">1. Scanning Feature to scan boarding pass</p>
+                                                <p class="moreInfo">2. Points system where they can claim things for
+                                                    their flight</p>
+                                                <p class="moreInfo">3. Location feature to see where your plane is at
+                                                    and how long
+                                                    it will take to reach their destination
+                                                </p>
+                                                <p class="moreInfo">4. Register and Login</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 sol-sm-10" onclick="openModal('krisModal')">
                                     <div class="card" style="width:600px; height: 550px; border-radius: 2rem;">
                                         <img class="card-img-top" src="images/airplaneApp.png" alt="Card image"
                                             style="width:100%; height:300px;">
                                         <div class="card-body">
                                             <h4 class="card-title">Singapore Airlines App</h4>
-                                            <p class="card-text">Embark on a seamless travel experience with my airline app, with the design in mind to make a user-friendly interface, 
-                                                explore a menus before flying, and enjoy interactive features to ensure hassle-free travel, offering a convenient
+                                            <p class="card-text">Embark on a seamless travel experience with my airline
+                                                app, with the design in mind to make a user-friendly interface,
+                                                explore a menus before flying, and enjoy interactive features to ensure
+                                                hassle-free travel, offering a convenient
                                                 and enjoyable journey for passengers.</p>
-                                                <div class="skillsForProjects">
-                                                    <p class="card-text"
-                                                        style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
-                                                        Adobe XD</p>
-                                                </div>
+                                            <div class="skillsForProjects">
+                                                <p class="card-text"
+                                                    style="display: inline-block; background: black; padding: 5px 10px 5px 10px; border-radius: 10px; color: white; font-size: 15px">
+                                                    Adobe XD</p>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -247,7 +581,7 @@
             </div>
 
             <ul class="nav col-md-6 justify-content-end list-unstyled d-flex list-inline">
-                <li class="ms-3"><a class="text-muted" href="https://twitter.com/home"><i class='bx bxl-twitter'
+                <li class="ms-3"><a class="text-muted" href="https://github.com/Bign1ck"><i class='bx bxl-github'
                             style="font-size: 30px;" width="30" height="30"></i></a></li>
                 <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/nicholas-tee-417825238/"><i
                             class='bx bxl-linkedin' style="font-size: 30px;" width="30" height="30"></i></a></li>
@@ -268,6 +602,16 @@
 
     <!-- custom js -->
     <script src="js/script.js"></script>
+
+    <script>
+        function openModal(modalId) {
+            var myModal = new bootstrap.Modal(document.getElementById(modalId), {
+                keyboard: true, // Allow closing with keyboard Esc key
+                backdrop: true // Allow closing by clicking on the backdrop
+            });
+            myModal.show();
+        }
+    </script>
 
 </body>
 

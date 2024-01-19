@@ -74,3 +74,23 @@ function opentab(tabname) {
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 };
+
+/*------------------------------------------------------------*/
+
+
+var myModal = new bootstrap.Modal(document.getElementById('yourModalId'));
+
+myModal._element.addEventListener('click', function (e) {
+    if (e.target === myModal._element) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});
+
+function openModal(modalId) {
+    var myModal = new bootstrap.Modal(document.getElementById(modalId), {
+        keyboard: true, // Allow closing with keyboard Esc key
+        backdrop: true // Allow closing by clicking on the backdrop
+    });
+    myModal.show();
+}
